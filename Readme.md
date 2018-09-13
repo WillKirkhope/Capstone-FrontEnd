@@ -11,7 +11,8 @@
 - https://trello.com/b/7zbtZTyN/capstone-user-stories
 
 ## Tech Used ##
-- HTML5, CSS3, Vue.js, Bootstrap or Vuetify, Firebase, Heroku, PostgreSQL, Knex, (GraphQL), (Apollo Client), (Docker).(Sequalize)
+- New Tech listed in ()
+- HTML5, CSS3, Vue.js, Bootstrap or Vuetify, Firebase, Heroku or (Docker), PostgreSQL, Knex, (GraphQL), (Apollo Client), Maybe (Sequalize)
 
 ## ERD ##
 - https://github.com/WillKirkhope/Capstone-BackEnd/blob/master/DataBase/Capstone%20ERD.png
