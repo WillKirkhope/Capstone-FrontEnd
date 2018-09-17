@@ -1,13 +1,16 @@
 <template lang="html">
   <div class="landing">
     <div class="Landing-img">
+      <div class="AppName">
+      <span class='name'>Fireteam Finder</span>
+    </div>
     </div>
     <div class="game-selection">
-      <button type="button" name="button">Battlefield 5</button>
-      <button type="button" name="button">Call Of Duty BOPS 4</button>
-      <button type="button" name="button">Destiny 2</button>
-      <button type="button" name="button">Overwatch</button>
-      <button type="button" name="button">Rainbow Six Siege</button>
+      <router-link id="button" to="/Destiny2">Battlefield 5</router-link>
+      <router-link id="button" to="/Destiny2">Call Of Duty BOPS 4</router-link>
+      <router-link id="button" to="/Destiny2">Destiny 2</router-link>
+      <router-link id="button" to="/Destiny2">Overwatch</router-link>
+      <router-link id="button" to="/Destiny2">Rainbow Six Siege</router-link>
     </div>
   </div>
 </template>
@@ -22,7 +25,7 @@ export default {
 
 .Landing-img {
     background-image: url("../assets/Fade.png");
-    height: 50vw;
+    height: 40vw;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -30,20 +33,34 @@ export default {
 }
 
 .game-selection {
-  /* border: solid white 3px; */
   background-color: #131f21;
   padding-right: 3vw;
-  padding-bottom: 10vw;
+  padding-bottom: 15vw;
 }
 
-button {
-  height: 3vw;
+#button {
+  height: 5vw;
   margin-left: 2vw;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #686868;
+  border-color: #686868;
   color: #fff;
   border-radius: 0.5vw;
-  font-size: 1vw;
+  font-size: 1.5vw;
+  padding: 1vw;
+  text-decoration: none;
+}
+
+.name{
+  background-color: #131f21;
+  color: #fff;
+  padding: 20px;
+  font-size: 36px;
+  letter-spacing: 10px;
+  justify-content: center;
+  text-align: center;
+}
+.AppName{
+  padding-top: 5vw;
 }
 
 </style>
