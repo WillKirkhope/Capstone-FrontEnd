@@ -8,7 +8,7 @@
       </b-card>
     </div>
     <div class="messaging">
-      <b-card title="Profile">
+      <b-card>
         <h3>Description</h3>
         <p>Yo! My name is Will and I play games in my free time, im better than I should be and I'm always down to help or squad up!</p>
         <h3>Play Style</h3>
@@ -19,7 +19,7 @@
     </div>
     </div>
     <div class="posts">
-      <div>
+      <div class="Brag-video">
         <b-embed type="iframe"
            aspect="16by9"
            src="https://gameclipscontent-d3021.xboxlive.com/xuid-2535444063957577-private/b1fb160c-422b-4e56-a1ca-0aad513b6b41.MP4?sv=2015-12-11&sr=b&si=DefaultAccess&sig=zd21fqVhUUGLbjNZRYBQWEGanNba%2BNMMkYyozqzSEnM%3D&__gda__=1537221759_2d77d55c2c87acb4ff0b597b24c604ff"
@@ -47,6 +47,9 @@
               class="card-link">Message</b-link>
       </b-card>
   </div>
+  <div class="new-post">
+    <router-link id="button" to="/CreatePost">Create Post</router-link>
+  </div>
 </div>
 </template>
 
@@ -61,7 +64,7 @@ export default {
 .profile{
   display: flex;
   height: 60vw;
-  background-image: url("../assets/Oryx.jpg");
+  background-image: url("../assets/Atheon.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -98,5 +101,21 @@ export default {
 .profile-messaging{
   margin-left: 5vw;
   margin-top: 5vw;
+}
+
+.Brag-video {
+  margin-bottom: 2vw;
+}
+
+.new-post {
+  margin-top: 6vw;
+}
+
+#button {
+  margin-left: 5vw;
+  background-color: white;
+  padding: 1vw;
+  border-radius: 10%;
+  text-decoration: none;
 }
 </style>

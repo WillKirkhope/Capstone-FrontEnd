@@ -23,6 +23,11 @@ export default new Router({
       path: '/WillKirkhope',
       name: 'Profile',
       component: Profile
+    },
+    {
+      path: '/CreatePost',
+      name: 'NewPostForm',
+      component: NewPostForm
     }
   ]
 })
