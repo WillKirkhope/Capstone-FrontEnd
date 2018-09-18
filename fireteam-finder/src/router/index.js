@@ -4,6 +4,8 @@ import Landing from '@/components/Landing'
 import Profile from '@/components/Profile'
 import NewPostForm from '@/components/NewPostForm'
 import HomePagePosts from '@/components/HomePagePosts'
+import Login from '@/components/Login'
+import NewUser from '@/components/NewUser'
 
 Vue.use(Router)
 
@@ -28,6 +30,16 @@ export default new Router({
       path: '/CreatePost',
       name: 'NewPostForm',
       component: NewPostForm
+    },
+    {
+      path: '/Login',
+      name: 'Login',
+      component: Login
+    },
+    {
+      path: '/NewUser',
+      name: 'NewUser',
+      component: NewUser
     }
   ]
 })

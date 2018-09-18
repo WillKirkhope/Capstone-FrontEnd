@@ -14,7 +14,7 @@
         <option value="18-25">18-25</option>
         <option value="25+">25+</option>
       </select>
-      <label htmlFor="mic-needed">Mic?</label>
+      <label class="Mic" htmlFor="mic-needed">Mic?</label>
       <select class="mic-needed" name="Mic?">
         <option value="Yes">Yes</option>
         <option value="No">No</option>
@@ -42,6 +42,12 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 60vw;
+  background-image: url("../assets/Destiny-Players.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #form {
@@ -58,6 +64,14 @@ input {
 
 select {
   margin-bottom: 1vw;
+}
+
+label {
+  color: #fff;
+}
+
+#submit-button {
+  margin-top: 1vw;
 }
 
 </style>
