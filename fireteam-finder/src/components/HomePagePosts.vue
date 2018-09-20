@@ -44,9 +44,26 @@
       </b-card>
     </div>
     <div class="messaging">
-      <b-card title="Messages">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <b-card title="Chat">
+        <router-link id="Chat" to="/Chat">Chat</router-link>
+        <div class="chat-body" id="chatbox">
+            <div class="messages" v-for="(msg, index) in messages" :key="index">
+                <p><span class="font-weight-bold">{{ msg.user }}: </span>{{ msg.message }}</p>
+            </div>
+        </div>
+        <div class="card-footer">
+            <form @submit.prevent="sendMessage">
+                <div class="gorm-group">
+                    <label for="user">User:</label>
+                    <input type="text" v-model="user" class="form-control">
+                </div>
+                <div class="gorm-group pb-3">
+                    <label for="message">Message:</label>
+                    <input type="text" v-model="message" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-success">Send</button>
+            </form>
+        </div>
       </b-card>
     </div>
     </div>
@@ -54,8 +71,37 @@
 </template>
 
 <script>
+import io from 'socket.io-client';
 export default {
-  name: 'HomePagePosts'
+  name: 'HomePagePosts',
+  data() {
+      return {
+          user: '',
+          message: '',
+          messages: [],
+          socket : io('localhost:3001')
+      }
+  },
+  methods: {
+      sendMessage(e) {
+          e.preventDefault();
+
+          this.socket.emit('SEND_MESSAGE', {
+              user: this.user,
+              message: this.message
+          });
+          this.message = ''
+      }
+  },
+  mounted() {
+      this.socket.on('MESSAGE', (data) => {
+          this.messages = [...this.messages, data];
+          this.$nextTick(function () {
+            var messageBox = document.getElementById('chatbox')
+            messageBox.scrollTop = messageBox.scrollHeight
+          })
+      });
+  }
 }
 </script>
 
@@ -100,13 +146,18 @@ export default {
 
 .messaging{
   width: 20vw;
-  height: 33vw;
+  height: 40vw;
   overflow: scroll;
 }
 
 .profile-messaging{
   margin-left: 5vw;
   margin-top: 5vw;
+}
+
+.chat-body{
+  height: 10vw;
+  overflow-y: scroll;
 }
 
 </style>
