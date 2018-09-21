@@ -5,18 +5,7 @@
       <img src="../assets/destiny-logo-png-2.png" alt="">
     </div>
     <div class="posts">
-      <b-card id="post" title="Shitting on Plebs in Cruci"
-              sub-title="Pictish Brute">
-            <p>Destiny 2</p>
-            <p class="card-text">
-              Crucible</p>
-            <p>Pub Stomping in Crucible</p>
-            <p>2</p>
-            <p>18-25</p>
-            <p>yes</p>
-            <a href="#"
-              class="card-link">View Profile</a>
-      </b-card>
+    <PostsList v-bind:myPosts="posts"/>
     </div>
     <div class="profile-messaging">
     <div class="Profile-section">
@@ -53,8 +42,12 @@
 
 <script>
 import io from 'socket.io-client';
+import PostsList from './PostsList'
 export default {
   name: 'HomePagePosts',
+  components: {
+    PostsList
+  },
   data() {
       return {
           posts: [],
@@ -141,7 +134,7 @@ export default {
 }
 
 .profile-messaging{
-  margin-left: 5vw;
+  margin-left: 3vw;
   margin-top: 5vw;
 }
 
