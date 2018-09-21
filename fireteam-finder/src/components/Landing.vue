@@ -8,7 +8,7 @@
     <div class="game-selection">
       <router-link id="button" to="/Destiny2">Battlefield 5</router-link>
       <router-link id="button" to="/Destiny2">Call Of Duty BOPS 4</router-link>
-      <router-link id="button" to="/Destiny2">Destiny 2</router-link>
+      <router-link id="button" to="/Destiny2" v-bind:myPosts="posts">Destiny 2</router-link>
       <router-link id="button" to="/Destiny2">Overwatch</router-link>
       <router-link id="button" to="/Destiny2">Rainbow Six Siege</router-link>
       <div class="login-user">
@@ -23,6 +23,24 @@
 <script>
 export default {
   name: 'Landing'
+// data(){
+//   return {
+//     posts: []
+//   }
+// },
+//   methods: {
+//   getData(){
+//     fetch('https://fireteam-finder.herokuapp.com/posts')
+//       .then(response => response.json())
+//       .then(myData => {
+//         this.posts = myData.post
+//       console.log('yo', myData);})
+//     }
+// },
+// mounted() {
+//   this.getData()
+// }
+
 }
 </script>
 

@@ -36,16 +36,6 @@
             <b-link href="#"
               class="card-link">Message</b-link>
       </b-card>
-      <b-card id="post" title="Shitting on Plebs in Cruci"
-              sub-title="">
-            <p class="card-text">
-              Some quick example text to build on the <em>card title</em> and make up the bulk of the card's content.
-            </p>
-            <a href="#"
-              class="card-link">View Profile</a>
-            <b-link href="#"
-              class="card-link">Message</b-link>
-      </b-card>
   </div>
   <div class="new-post">
     <router-link id="button" to="/CreatePost">Create Post</router-link>

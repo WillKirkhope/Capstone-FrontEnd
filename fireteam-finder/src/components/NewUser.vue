@@ -1,20 +1,20 @@
 <template lang="html">
   <div class="new-form">
-    <form id="form">
+    <form id="form" @submit.prevent="postNewEvent">
       <label htmlFor="name">GamerTag</label>
-      <input type="text" name="GamerTag" placeholder="GamerTag">
+      <input type="text" name="GamerTag" placeholder="GamerTag" v-model="formData.GamerTag" />
       <label htmlFor="Password">Create Password</label>
-      <input type="text" name="Game" placeholder="Password">
+      <input type="text" name="Game" placeholder="Password" v-model="formData.Password" />
       <label htmlFor="gamer-img">Gamer Image</label>
-      <input type="text" name="Activity" placeholder="Add Image Link">
+      <input type="text" name="Activity" placeholder="Add Image Link" v-model="formData.Image">
       <label htmlFor="gamer-video">Brag Video</label>
-      <input type="text" name="brag-video" placeholder="Add Video Link">
+      <input type="text" name="brag-video" placeholder="Add Video Link" v-model="formData.Video">
       <label htmlFor="playstyle">Play Style</label>
-      <textarea name="name" rows="2" cols="60" placeholder="Play Style"></textarea>
+      <textarea name="name" rows="2" cols="60" placeholder="Play Style" v-model="formData.PlayStyle"></textarea>
       <label htmlFor="topGames">Top Games</label>
-      <textarea name="name" rows="2" cols="60" placeholder="Top Games"></textarea>
+      <textarea name="name" rows="2" cols="60" placeholder="Top Games" v-model="formData.FavoriteGames"></textarea>
       <label htmlFor="description">Description</label>
-      <textarea name="name" rows="4" cols="60" placeholder="Description"></textarea>
+      <textarea name="name" rows="4" cols="60" placeholder="Description" v-model="formData.Description"></textarea>
       <input id="submit-button" type="submit" name="submit" value="Submit">
     </form>
   </div>
@@ -23,7 +23,29 @@
 
 <script>
 export default {
-  name: 'NewUser'
+  name: 'NewUser',
+  data(){
+    return {
+      formData: {
+        GamerTag: '',
+        Password: '',
+        Description: '',
+        PlayStyle: '',
+        FavoriteGames: '',
+        Image: '',
+        Video: ''
+      }
+    }
+  },
+  methods: {
+    postNewEvent(){
+      fetch('https://fireteam-finder.herokuapp.com/users', {
+        method: 'POST',
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(this.formData)
+      })
+    }
+  }
 }
 </script>
 

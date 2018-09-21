@@ -6,46 +6,27 @@
     </div>
     <div class="posts">
       <b-card id="post" title="Shitting on Plebs in Cruci"
-              sub-title="">
+              sub-title="Pictish Brute">
+            <p>Destiny 2</p>
             <p class="card-text">
-              Some quick example text to build on the <em>card title</em> and make up the bulk of the card's content.
-            </p>
+              Crucible</p>
+            <p>Pub Stomping in Crucible</p>
+            <p>2</p>
+            <p>18-25</p>
+            <p>yes</p>
             <a href="#"
               class="card-link">View Profile</a>
-            <b-link href="#"
-              class="card-link">Message</b-link>
-      </b-card>
-      <b-card id="post" title="Shitting on Plebs in Cruci"
-              sub-title="">
-            <p class="card-text">
-              Some quick example text to build on the <em>card title</em> and make up the bulk of the card's content.
-            </p>
-            <a href="#"
-              class="card-link">View Profile</a>
-            <b-link href="#"
-              class="card-link">Message</b-link>
-      </b-card>
-      <b-card id="post" title="Shitting on Plebs in Cruci"
-              sub-title="">
-            <p class="card-text">
-              Some quick example text to build on the <em>card title</em> and make up the bulk of the card's content.
-            </p>
-            <a href="#"
-              class="card-link">View Profile</a>
-            <b-link href="#"
-              class="card-link">Message</b-link>
       </b-card>
     </div>
     <div class="profile-messaging">
     <div class="Profile-section">
       <b-card title="Will Kirkhope"
               sub-title="Slayer">
-            <router-link id="WillKirkhope" to="/WillKirkhope">View Profile</router-link>
+            <router-link id="WillKirkhope" to="/WillKirkhope">My Profile</router-link>
       </b-card>
     </div>
     <div class="messaging">
       <b-card title="Chat">
-        <router-link id="Chat" to="/Chat">Chat</router-link>
         <div class="chat-body" id="chatbox">
             <div class="messages" v-for="(msg, index) in messages" :key="index">
                 <p><span class="font-weight-bold">{{ msg.user }}: </span>{{ msg.message }}</p>
@@ -76,6 +57,7 @@ export default {
   name: 'HomePagePosts',
   data() {
       return {
+          posts: [],
           user: '',
           message: '',
           messages: [],
@@ -83,6 +65,13 @@ export default {
       }
   },
   methods: {
+    getData(){
+      fetch('https://fireteam-finder.herokuapp.com/posts')
+        .then(response => response.json())
+        .then(myData => {
+          this.posts = myData.post
+        console.log('yo', myData);})
+      },
       sendMessage(e) {
           e.preventDefault();
 
@@ -91,9 +80,10 @@ export default {
               message: this.message
           });
           this.message = ''
-      }
-  },
+      },
+    },
   mounted() {
+      this.getData(),
       this.socket.on('MESSAGE', (data) => {
           this.messages = [...this.messages, data];
           this.$nextTick(function () {
@@ -146,7 +136,7 @@ export default {
 
 .messaging{
   width: 20vw;
-  height: 40vw;
+  height: 45vw;
   overflow: scroll;
 }
 
