@@ -39,7 +39,7 @@ export default {
 
 .game-selection {
   background-color: #131f21;
-  padding-right: 4vw;
+  /* padding-right: 4vw; */
   padding-bottom: 15vw;
 }
 
@@ -70,7 +70,7 @@ export default {
 
 .login-user {
   margin-top: 3vw;
-  padding-left: 4vw;
+  /* padding-left: 4vw; */
 }
 
 #login {
