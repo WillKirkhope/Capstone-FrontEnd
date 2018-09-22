@@ -14,6 +14,12 @@
             <router-link id="Profiles" to="/Profiles">View Profiles</router-link>
       </b-card>
     </div>
+    <div class="Profile-section">
+      <b-card title=""
+              sub-title="">
+            <router-link id="button" to="/CreatePost">Create Post</router-link>
+      </b-card>
+    </div>
     <div class="messaging">
       <b-card title="Chat">
         <div class="chat-body" id="chatbox">

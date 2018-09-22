@@ -3,9 +3,6 @@
     <div class="posts">
     <ProfileList v-bind:myUsers="users"/>
     </div>
-  <div class="new-post">
-    <router-link id="button" to="/CreatePost">Create Post</router-link>
-  </div>
 </div>
 </template>
 
@@ -84,15 +81,5 @@ export default {
   margin-bottom: 2vw;
 }
 
-.new-post {
-  margin-top: 6vw;
-}
 
-#button {
-  margin-left: 5vw;
-  background-color: white;
-  padding: 1vw;
-  border-radius: 10%;
-  text-decoration: none;
-}
 </style>
