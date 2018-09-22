@@ -6,7 +6,7 @@ import NewPostForm from '@/components/NewPostForm'
 import HomePagePosts from '@/components/HomePagePosts'
 import Login from '@/components/Login'
 import NewUser from '@/components/NewUser'
-import Chat from '@/components/Chat'
+import Profiles from '@/components/Profiles'
 
 Vue.use(Router)
 
@@ -43,9 +43,9 @@ export default new Router({
       component: NewUser
     },
     {
-      path: '/Chat',
-      name: 'Chat',
-      component: Chat
+      path: '/Profiles',
+      name: 'Profiles',
+      component: Profiles
     }
   ]
 })

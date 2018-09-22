@@ -9,9 +9,9 @@
     </div>
     <div class="profile-messaging">
     <div class="Profile-section">
-      <b-card title="Will Kirkhope"
-              sub-title="Slayer">
-            <router-link id="WillKirkhope" to="/WillKirkhope">My Profile</router-link>
+      <b-card title=""
+              sub-title="">
+            <router-link id="Profiles" to="/Profiles">View Profiles</router-link>
       </b-card>
     </div>
     <div class="messaging">
