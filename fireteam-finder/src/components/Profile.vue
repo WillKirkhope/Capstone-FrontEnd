@@ -3,8 +3,7 @@
     <b-card id="post">
           <h3>GamerTag: {{user.GamerTag}}</h3>
           <h5>Description: {{user.Description}}</h5>
-          <a href="#"
-            class="card-link">View Profile</a>
+          <b-button variant="primary" id = "create-button" :to="`/user/${user.id}`">Details</b-button>
     </b-card>
   </div>
 </template>

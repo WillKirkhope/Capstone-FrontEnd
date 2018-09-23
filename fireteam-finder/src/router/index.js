@@ -7,6 +7,8 @@ import HomePagePosts from '@/components/HomePagePosts'
 import Login from '@/components/Login'
 import NewUser from '@/components/NewUser'
 import Profiles from '@/components/Profiles'
+import UserById from '@/components/UserById'
+// import SingleProfile from '@/components/SingleProfile'
 
 Vue.use(Router)
 
@@ -46,6 +48,11 @@ export default new Router({
       path: '/Profiles',
       name: 'Profiles',
       component: Profiles
+    },
+    {
+      path: '/user/:id',
+      name: 'UserById',
+      component: UserById
     }
   ]
 })
