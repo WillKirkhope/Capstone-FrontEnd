@@ -6,8 +6,11 @@ import router from './router'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import VueYouTubeEmbed from 'vue-youtube-embed'
+
 
 Vue.use(BootstrapVue);
+Vue.use(VueYouTubeEmbed)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

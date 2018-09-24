@@ -1,10 +1,10 @@
 <template lang="html">
-  <div class="profile">
+  <div class="SingleProfile">
     <div class="profile-messaging">
     <div class="Profile-section">
       <b-card>
             <h1>{{this.myEvents[0].GamerTag}}</h1>
-              <img src="../assets/Hunter.jpg" alt="hunt">
+              <img :src='this.myEvents[0].Image' alt="Img">
       </b-card>
     </div>
     <div class="messaging">
@@ -22,20 +22,10 @@
       <div class="Brag-video">
         <b-embed type="iframe"
            aspect="16by9"
-           src="https://gameclipscontent-d3021.xboxlive.com/xuid-2535444063957577-private/b1fb160c-422b-4e56-a1ca-0aad513b6b41.MP4?sv=2015-12-11&sr=b&si=DefaultAccess&sig=zd21fqVhUUGLbjNZRYBQWEGanNba%2BNMMkYyozqzSEnM%3D&__gda__=1537221759_2d77d55c2c87acb4ff0b597b24c604ff"
+           src='https://gameclipscontent-d3022.xboxlive.com/xuid-2535444063957577-private/d4d4224f-e541-451b-87e0-88cf0c22a4f9.MP4?sv=2015-12-11&sr=b&si=DefaultAccess&sig=83VTwRC8375zza9A%2FGNO7Gs1%2B0mIV6F3sBmx7XppQZM%3D&__gda__=1537813386_e1caa1e1a96ada7ea4337574ffe88fd9'
            allowfullscreen
            ></b-embed>
       </div>
-      <b-card id="post" title="Shitting on Plebs in Cruci"
-              sub-title="">
-            <p class="card-text">
-              Some quick example text to build on the <em>card title</em> and make up the bulk of the card's content.
-            </p>
-            <a href="#"
-              class="card-link">View Profile</a>
-            <b-link href="#"
-              class="card-link">Message</b-link>
-      </b-card>
   </div>
 </div>
 </template>
@@ -49,10 +39,10 @@ export default {
 
 <style lang="css">
 
-.profile{
+.SingleProfile{
   display: flex;
   height: 60vw;
-  background-image: url("../assets/Atheon.jpg");
+  background-image: url("../assets/User.jpeg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -89,21 +79,5 @@ export default {
 .profile-messaging{
   margin-left: 5vw;
   margin-top: 5vw;
-}
-
-.Brag-video {
-  margin-bottom: 2vw;
-}
-
-.new-post {
-  margin-top: 6vw;
-}
-
-#button {
-  margin-left: 5vw;
-  background-color: white;
-  padding: 1vw;
-  border-radius: 10%;
-  text-decoration: none;
 }
 </style>

@@ -48,7 +48,7 @@ export default {
 .posts{
   width: 50vw;
   height: 50vw;
-  margin-left: 8vw;
+  margin-left: 25vw;
   margin-top: 5vw;
   overflow: scroll;
 }

@@ -9,19 +9,8 @@
       <input type="text" name="Activity" placeholder="In Game Activity" v-model="formData.Activity" />
       <label htmlFor="agegroup">Age Group</label>
       <input type="text" name="AgeGroup" placeholder="Below 18, 18-25, 25+" v-model="formData.AgeGroup" />
-      <!-- <select class="age-group" name="AgeGroup">
-        <option value="Don't Care!">Don't Care!</option>
-        <option value="Under 18">Under 18</option>
-        <option value="18-25">18-25</option>
-        <option value="25+">25+</option>
-      </select> -->
       <label class="Mic" htmlFor="mic-needed">Mic?</label>
       <input type="text" name="Mic" placeholder="Yes, No, Don't Care!" v-model="formData.Mic" />
-      <!-- <select class="mic-needed" name="Mic?">
-        <option value="Yes">Yes</option>
-        <option value="No">No</option>
-        <option value="All Good without it!">All Good Without it!</option>
-      </select> -->
       <label htmlFor="playersneeded">Players Needed</label>
       <input type="text" name="PlayersNeeded" placeholder="Players Needed" v-model="formData.PlayersNeeded" />
       <label htmlFor="description">Description</label>

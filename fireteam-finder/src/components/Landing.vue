@@ -12,9 +12,7 @@
       <router-link id="button" to="/Destiny2">Overwatch</router-link>
       <router-link id="button" to="/Destiny2">Rainbow Six Siege</router-link>
       <div class="login-user">
-        <router-link id="login" to="/Login">Login</router-link>
-        <br>
-        <router-link id="NewUser" to="/NewUser">New User</router-link>
+        <router-link id="NewUser" to="/NewUser">New User?</router-link>
       </div>
     </div>
   </div>
