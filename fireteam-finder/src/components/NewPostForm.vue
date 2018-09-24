@@ -7,14 +7,14 @@
       <input type="text" name="Game" placeholder="Game" v-model="formData.Gamer" />
       <label htmlFor="activity">In Game Activity</label>
       <input type="text" name="Activity" placeholder="In Game Activity" v-model="formData.Activity" />
+      <label htmlFor="description">Description</label>
+      <textarea type="text" name="description" placeholder="Description" v-model="formData.Description"></textarea>
+      <label htmlFor="playersneeded">Players Needed</label>
+      <input type="text" name="PlayersNeeded" placeholder="Players Needed" v-model="formData.PlayersNeeded" />
       <label htmlFor="agegroup">Age Group</label>
       <input type="text" name="AgeGroup" placeholder="Below 18, 18-25, 25+" v-model="formData.AgeGroup" />
       <label class="Mic" htmlFor="mic-needed">Mic?</label>
       <input type="text" name="Mic" placeholder="Yes, No, Don't Care!" v-model="formData.Mic" />
-      <label htmlFor="playersneeded">Players Needed</label>
-      <input type="text" name="PlayersNeeded" placeholder="Players Needed" v-model="formData.PlayersNeeded" />
-      <label htmlFor="description">Description</label>
-      <textarea name="name" rows="6" cols="60" placeholder="Description" v-model="formData.Description"></textarea>
       <input id="submit-button" type="submit" name="submit" value="Submit" />
     </form>
   </div>
@@ -44,6 +44,7 @@ export default {
         headers: { "content-type": "application/json" },
         body: JSON.stringify(this.formData)
       })
+      .then(res => console.log("status", res.status))
     }
   }
 }
