@@ -70,18 +70,18 @@ export default {
 }
 
 .form-container {
-  background-color: #131F21;
-  width: 20vw;
-  margin-left: 40vw;
-  opacity: 0.8;
-  border-radius: 0.5vw;
+  background-color: #131F21 !important;
+  width: 20vw !important;
+  margin-left: 40vw !important;
+  opacity: 0.8 !important;
+  border-radius: 0.5vw !important;
 }
 
 #form {
-  display:flex;
-  flex-direction:column;
-  padding:50px;
-  align-items:center;
+  display:flex !important;
+  flex-direction:column !important;
+  padding:50px !important;
+  align-items:center !important;
 }
 
 textarea {

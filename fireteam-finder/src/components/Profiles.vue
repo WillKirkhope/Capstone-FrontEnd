@@ -46,11 +46,11 @@ export default {
 }
 
 .posts{
-  width: 50vw;
-  height: 50vw;
-  margin-left: 25vw;
-  margin-top: 5vw;
-  overflow: scroll;
+  width: 50vw !important;
+  height: 50vw !important;
+  margin-left: 25vw !important;
+  margin-top: 5vw !important;
+  overflow: scroll !important;
 }
 
 #post{
