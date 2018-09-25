@@ -3,8 +3,6 @@
     <form id="form" @submit.prevent="postNewEvent">
       <label htmlFor="name">GamerTag</label>
       <input type="text" name="GamerTag" placeholder="GamerTag" v-model="formData.GamerTag" />
-      <label htmlFor="Password">Create Password</label>
-      <input type="text" name="Game" placeholder="Password" v-model="formData.Password" />
       <label htmlFor="gamer-img">Gamer Image</label>
       <input type="text" name="Activity" placeholder="Add Image Link" v-model="formData.Image">
       <label htmlFor="gamer-video">Brag Video</label>
@@ -28,7 +26,6 @@ export default {
     return {
       formData: {
         GamerTag: '',
-        Password: '',
         Description: '',
         PlayStyle: '',
         FavoriteGames: '',
@@ -41,7 +38,9 @@ export default {
     postNewEvent(){
       fetch('https://fireteam-finder.herokuapp.com/users', {
         method: 'POST',
-        headers: { "content-type": "application/json" },
+        headers: {
+           "Content-type": "application/json"
+          },
         body: JSON.stringify(this.formData)
       })
     }
