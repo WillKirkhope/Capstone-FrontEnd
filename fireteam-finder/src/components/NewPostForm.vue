@@ -57,7 +57,7 @@ export default {
 
 <style lang="css">
 
-.new-form !important {
+.new-form {
   display: flex;
   justify-content: center;
   align-items: center;
