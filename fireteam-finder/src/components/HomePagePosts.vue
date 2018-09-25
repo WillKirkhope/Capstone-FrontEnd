@@ -56,11 +56,11 @@ export default {
   },
   data() {
       return {
-          posts: [],
-          user: '',
-          message: '',
-          messages: [],
-          socket : io('localhost:3001')
+          posts: []
+          // user: '',
+          // message: '',
+          // messages: [],
+          // socket : io('localhost:3001')
       }
   },
   methods: {
@@ -70,26 +70,10 @@ export default {
         .then(myData => {
           this.posts = myData.post
         console.log('yo', myData);})
-      },
-      sendMessage(e) {
-          e.preventDefault();
-
-          this.socket.emit('SEND_MESSAGE', {
-              user: this.user,
-              message: this.message
-          });
-          this.message = ''
-      },
+      }
     },
   mounted() {
-      this.getData(),
-      this.socket.on('MESSAGE', (data) => {
-          this.messages = [...this.messages, data];
-          this.$nextTick(function () {
-            var messageBox = document.getElementById('chatbox')
-            messageBox.scrollTop = messageBox.scrollHeight
-          })
-      });
+      this.getData()
   }
 }
 </script>

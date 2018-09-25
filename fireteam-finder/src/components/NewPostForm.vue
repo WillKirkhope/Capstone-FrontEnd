@@ -4,7 +4,7 @@
       <label htmlFor="name">GamerTag</label>
       <input type="text" name="GamerTag" placeholder="GamerTag" v-model="formData.GamerTag" />
       <label htmlFor="name">Game</label>
-      <input type="text" name="Game" placeholder="Game" v-model="formData.Gamer" />
+      <input type="text" name="Game" placeholder="Game" v-model="formData.Game" />
       <label htmlFor="activity">In Game Activity</label>
       <input type="text" name="Activity" placeholder="In Game Activity" v-model="formData.Activity" />
       <label htmlFor="description">Description</label>
@@ -15,7 +15,7 @@
       <input type="text" name="AgeGroup" placeholder="Below 18, 18-25, 25+" v-model="formData.AgeGroup" />
       <label class="Mic" htmlFor="mic-needed">Mic?</label>
       <input type="text" name="Mic" placeholder="Yes, No, Don't Care!" v-model="formData.Mic" />
-      <input id="submit-button" type="submit" name="submit" value="Submit" />
+      <input id="submit-button" type="submit" name="submit" value="Submit"/>
     </form>
   </div>
 
@@ -38,13 +38,27 @@ export default {
     }
   },
   methods: {
+    // testMethod(){
+    //   fetch('https://fireteam-finder.herokuapp.com/posts', {
+    //     method: 'POST',
+    //     // headers: { "content-type" : "application/json" },
+    //     body: this.formData
+    //   })
+    //   .then(res => console.log("status", res.json()))
+    //   .then(console.log(this.formData, "data"))
+    //   console.log('finished')
+    // },
     postNewEvent(){
+      console.log(this.formData)
       fetch('https://fireteam-finder.herokuapp.com/posts', {
         method: 'POST',
-        headers: { "content-type": "application/json" },
+        headers: {
+          "Content-type" : "application/json"
+        },
         body: JSON.stringify(this.formData)
       })
-      .then(res => console.log("status", res.status))
+      // .then(res => console.log("status", res.json()))
+      .then(console.log(this.formData, "data"))
     }
   }
 }
