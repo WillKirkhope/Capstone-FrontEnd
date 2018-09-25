@@ -19,4 +19,11 @@ export default {
 
 <style lang="css">
 
+#create-button {
+  border-radius: 0.5vw;
+  background-color: #686868;
+  border-color: #686868;
+  color: #fff;
+}
+
 </style>

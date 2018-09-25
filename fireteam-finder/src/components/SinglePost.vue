@@ -8,8 +8,7 @@
           <h5>Age Group: {{post.AgeGroup}}</h5>
           <h5>Mic: {{post.Mic}}</h5>
           <p>Description: {{post.Description}}</p>
-          <a href="#"
-            class="card-link">View Profile</a>
+          <button @click="this.deleteEvent" id="delete" type="button" name="button">Delete</button>
     </b-card>
   </div>
 </template>
@@ -17,9 +16,28 @@
 <script>
 export default {
   name: "SinglePost",
-   props: ["post"]
+   props: ["post"],
+
+  methods: {
+    deleteEvent (event) {
+  console.log('delete was clicked')
+  console.log('target',event.target.id)
+  const post_id = event.target.id
+  fetch(`https://fireteam-finder.herokuapp.com/posts/${this.post.id}`, {
+    method: 'DELETE'
+  })
+}
+}
 }
 </script>
 
 <style lang="css">
+
+button {
+  border-radius: 0.5vw;
+  background-color: #686868;
+  border-color: #686868;
+  color: #fff;
+}
+
 </style>

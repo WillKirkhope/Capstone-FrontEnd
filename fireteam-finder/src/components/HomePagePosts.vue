@@ -17,7 +17,7 @@
     <div class="Profile-section">
       <b-card title=""
               sub-title="">
-            <router-link id="button" to="/CreatePost">Create Post</router-link>
+            <router-link id="Create" to="/CreatePost">Create Post</router-link>
       </b-card>
     </div>
     <div class="messaging">
@@ -37,7 +37,7 @@
                     <label for="message">Message:</label>
                     <input type="text" v-model="message" class="form-control">
                 </div>
-                <button type="submit" class="btn btn-success">Send</button>
+                <button id="Sub-butt" type="submit" class="btn btn-success">Send</button>
             </form>
         </div>
       </b-card>
@@ -115,6 +115,15 @@ export default {
 .Profile-section {
   width: 20vw;
   margin-bottom: 2vw;
+
+}
+
+#Profiles{
+  color: #5C6672;
+}
+
+#Create{
+  color: #5C6672;
 }
 
 .messaging{
@@ -131,6 +140,13 @@ export default {
 .chat-body{
   height: 10vw;
   overflow-y: scroll;
+}
+
+#Sub-butt {
+  border-radius: 0.5vw;
+  background-color: #686868;
+  border-color: #686868;
+  color: #fff;
 }
 
 </style>
