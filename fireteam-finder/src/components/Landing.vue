@@ -51,6 +51,8 @@ export default {
   font-size: 1.5vw;
   padding: 1vw;
   text-decoration: none;
+  animation: fadeIn;
+  animation-duration: 5s;
 }
 
 .name{
@@ -61,7 +63,19 @@ export default {
   letter-spacing: 10px;
   justify-content: center;
   text-align: center;
+  animation: fadeIn;
+  animation-duration: 5s;
 }
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
 .AppName{
   padding-top: 5vw;
 }
@@ -77,6 +91,8 @@ export default {
 
 #NewUser {
   color: #5C6672;
+  animation: fadeIn;
+  animation-duration: 5s;
 }
 
 </style>
