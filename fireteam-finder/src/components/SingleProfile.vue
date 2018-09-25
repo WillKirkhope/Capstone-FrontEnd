@@ -18,7 +18,7 @@
       </b-card>
     </div>
     </div>
-    <div class="posts">
+    <div class="video">
       <div class="Brag-video">
         <b-embed type="iframe"
            aspect="16by9"
@@ -49,7 +49,7 @@ export default {
   background-size: cover;
 }
 
-.posts{
+.video{
   width: 50vw;
   height: 50vw;
   margin-left: 8vw;
@@ -57,9 +57,9 @@ export default {
   overflow: scroll;
 }
 
-#post{
+/* #post{
   margin-bottom: 2vw;
-}
+} */
 
 .Profile-section {
   width: 20vw;
