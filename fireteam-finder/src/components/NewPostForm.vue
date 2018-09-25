@@ -69,7 +69,7 @@ export default {
   background-size: cover;
 }
 
-.form-container !important {
+.form-container {
   background-color: #131F21;
   width: 20vw;
   margin-left: 40vw;
@@ -77,7 +77,7 @@ export default {
   border-radius: 0.5vw;
 }
 
-#form !important {
+#form {
   display: flex;
   flex-direction: column;
   padding: 50px;
@@ -100,7 +100,7 @@ label {
   color: #fff;
 }
 
-#submit-button !important {
+#submit-button {
   margin-top: 1vw;
   border-radius: 0.5vw;
   background-color: #686868;
