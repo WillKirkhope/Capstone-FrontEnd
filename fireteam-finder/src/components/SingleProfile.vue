@@ -22,7 +22,7 @@
       <div class="Brag-video">
         <b-embed type="iframe"
            aspect="16by9"
-           src='https://gameclipscontent-d3022.xboxlive.com/xuid-2535444063957577-private/d4d4224f-e541-451b-87e0-88cf0c22a4f9.MP4?sv=2015-12-11&sr=b&si=DefaultAccess&sig=83VTwRC8375zza9A%2FGNO7Gs1%2B0mIV6F3sBmx7XppQZM%3D&__gda__=1537813386_e1caa1e1a96ada7ea4337574ffe88fd9'
+           src='https://gameclipscontent-d2001.xboxlive.com/xuid-2535444063957577-private/ff030c65-5d4a-472c-9bae-a426b71281b9.MP4?sv=2015-12-11&sr=b&si=DefaultAccess&sig=rR1jx8BVlcidGNfscnJ25kGBswEs4uwCYY0DE9oxNBw%3D&__gda__=1537898757_cafcff88e1068203592dd07b91228be6'
            allowfullscreen
            ></b-embed>
       </div>
