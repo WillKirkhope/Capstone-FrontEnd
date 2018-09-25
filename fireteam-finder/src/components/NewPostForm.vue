@@ -57,7 +57,7 @@ export default {
 
 <style lang="css">
 
-.new-form {
+.new-form !important {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,19 +69,19 @@ export default {
   background-size: cover;
 }
 
-.form-container {
-  background-color: #131F21 !important;
-  width: 20vw !important;
-  margin-left: 40vw !important;
-  opacity: 0.8 !important;
-  border-radius: 0.5vw !important;
+.form-container !important {
+  background-color: #131F21;
+  width: 20vw;
+  margin-left: 40vw;
+  opacity: 0.8;
+  border-radius: 0.5vw;
 }
 
-#form {
-  display:flex !important;
-  flex-direction:column !important;
-  padding:50px !important;
-  align-items:center !important;
+#form !important {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  align-items: center;
 }
 
 textarea {
@@ -100,7 +100,7 @@ label {
   color: #fff;
 }
 
-#submit-button {
+#submit-button !important {
   margin-top: 1vw;
   border-radius: 0.5vw;
   background-color: #686868;
