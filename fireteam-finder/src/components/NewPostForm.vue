@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="new-form">
+    <div class="form-container">
     <form id="form" @submit.prevent="postNewEvent">
       <label htmlFor="name">GamerTag</label>
       <input type="text" name="GamerTag" placeholder="GamerTag" v-model="formData.GamerTag" />
@@ -17,6 +18,7 @@
       <input type="text" name="Mic" placeholder="Yes, No, Don't Care!" v-model="formData.Mic" />
       <input id="submit-button" type="submit" name="submit" value="Submit"/>
     </form>
+    </div>
   </div>
 
 </template>
@@ -38,16 +40,6 @@ export default {
     }
   },
   methods: {
-    // testMethod(){
-    //   fetch('https://fireteam-finder.herokuapp.com/posts', {
-    //     method: 'POST',
-    //     // headers: { "content-type" : "application/json" },
-    //     body: this.formData
-    //   })
-    //   .then(res => console.log("status", res.json()))
-    //   .then(console.log(this.formData, "data"))
-    //   console.log('finished')
-    // },
     postNewEvent(){
       console.log(this.formData)
       fetch('https://fireteam-finder.herokuapp.com/posts', {
@@ -57,7 +49,6 @@ export default {
         },
         body: JSON.stringify(this.formData)
       })
-      // .then(res => console.log("status", res.json()))
       .then(console.log(this.formData, "data"))
     }
   }
@@ -71,19 +62,30 @@ export default {
   justify-content: center;
   align-items: center;
   height: 60vw;
-  background-image: url("../assets/Destiny-Players.jpg");
+  background-image: url("../assets/FormBack.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.form-container {
+  background-color: #131F21;
+  width: 20vw;
+  margin-left: 40vw;
+  opacity: 0.8;
+  border-radius: 0.5vw;
+}
+
 #form {
   display:flex;
   flex-direction:column;
   padding:50px;
-  width:40vw;
   align-items:center;
+}
+
+textarea {
+  margin-bottom: 1vw;
 }
 
 input {
@@ -100,6 +102,10 @@ label {
 
 #submit-button {
   margin-top: 1vw;
+  border-radius: 0.5vw;
+  background-color: #686868;
+  border-color: #686868;
+  color: #fff;
 }
 
 </style>
