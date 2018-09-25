@@ -12,6 +12,7 @@
       <router-link id="button" to="/Destiny2">Overwatch</router-link>
       <router-link id="button" to="/Destiny2">Rainbow Six Siege</router-link>
       <div class="login-user">
+        <br>
         <router-link id="NewUser" to="/NewUser">New User?</router-link>
       </div>
     </div>
@@ -37,7 +38,6 @@ export default {
 
 .game-selection {
   background-color: #131f21;
-  /* padding-right: 4vw; */
   padding-bottom: 15vw;
 }
 
@@ -78,15 +78,6 @@ export default {
 
 .AppName{
   padding-top: 5vw;
-}
-
-.login-user {
-  margin-top: 3vw;
-  /* padding-left: 4vw; */
-}
-
-#login {
-  color: #5C6672;
 }
 
 #NewUser {

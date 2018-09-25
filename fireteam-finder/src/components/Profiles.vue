@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="profile">
-    <div class="posts">
+    <div class="user">
     <ProfileList v-bind:myUsers="users"/>
     </div>
 </div>
@@ -45,7 +45,7 @@ export default {
   background-size: cover;
 }
 
-.posts{
+.user{
   width: 50vw;
   height: 50vw;
   margin-left: 25vw;
@@ -57,29 +57,6 @@ export default {
   margin-bottom: 2vw;
 }
 
-.Profile-section {
-  width: 20vw;
-  margin-bottom: 2vw;
-}
-
-.Profile-section img {
-  height: 12vw;
-}
-
-.messaging{
-  width: 20vw;
-  height: 30vw;
-  overflow: scroll;
-}
-
-.profile-messaging{
-  margin-left: 5vw;
-  margin-top: 5vw;
-}
-
-.Brag-video {
-  margin-bottom: 2vw;
-}
 
 
 </style>

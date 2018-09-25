@@ -51,15 +51,10 @@ export default {
 
 .video{
   width: 50vw;
-  height: 50vw;
-  margin-left: 8vw;
+  margin-left: 5vw;
   margin-top: 5vw;
   overflow: scroll;
 }
-
-/* #post{
-  margin-bottom: 2vw;
-} */
 
 .Profile-section {
   width: 20vw;
