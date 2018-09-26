@@ -2,13 +2,13 @@
   <div class="SingleProfile">
     <div class="profile-messaging">
     <div class="Profile-section">
-      <b-card>
+      <b-card id="name-tag">
             <h1>{{this.myEvents[0].GamerTag}}</h1>
               <img :src='this.myEvents[0].Image' alt="Img">
       </b-card>
     </div>
     <div class="messaging">
-      <b-card>
+      <b-card id="info-tag">
         <h3>Description</h3>
         <p>{{this.myEvents[0].Description}}</p>
         <h3>Play Style</h3>
@@ -26,6 +26,12 @@
            allowfullscreen
            ></b-embed>
       </div>
+  </div>
+  <div class="return">
+    <b-card id="create-link" title=""
+            sub-title="">
+          <router-link id="return" to="/Destiny2">Return to feed</router-link>
+    </b-card>
   </div>
 </div>
 </template>
@@ -75,4 +81,22 @@ export default {
   margin-left: 5vw;
   margin-top: 5vw;
 }
+
+.return{
+  margin-left: 4vw;
+  margin-top: 5vw;
+}
+
+#info-tag{
+  background-color: #E5E6E4;
+}
+
+#name-tag{
+  background-color: #E5E6E4;
+}
+
+#return{
+  color: #5C6672;
+}
+
 </style>

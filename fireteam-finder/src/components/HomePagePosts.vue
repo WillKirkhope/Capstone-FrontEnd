@@ -9,19 +9,19 @@
     </div>
     <div class="profile-messaging">
     <div class="Profile-section">
-      <b-card title=""
+      <b-card id="profile-link" title=""
               sub-title="">
             <router-link id="Profiles" to="/Profiles">View Profiles</router-link>
       </b-card>
     </div>
     <div class="Profile-section">
-      <b-card title=""
+      <b-card id="create-link" title=""
               sub-title="">
             <router-link id="Create" to="/CreatePost">Create Post</router-link>
       </b-card>
     </div>
     <div class="messaging">
-      <b-card title="Chat">
+      <b-card id="Chat-section" title="Chat">
         <div class="chat-body" id="chatbox">
             <div class="messages" v-for="(msg, index) in messages" :key="index">
                 <p><span class="font-weight-bold">{{ msg.user }}: </span>{{ msg.message }}</p>
@@ -137,6 +137,7 @@ export default {
 
 #post{
   margin-bottom: 2vw;
+  background-color: #E5E6E4;
 }
 
 .Profile-section {
@@ -153,6 +154,14 @@ export default {
   color: #5C6672;
 }
 
+#create-link{
+  background-color: #E5E6E4;
+}
+
+#profile-link{
+  background-color: #E5E6E4;
+}
+
 .messaging{
   width: 20vw;
   height: 45vw;
@@ -167,6 +176,10 @@ export default {
 .chat-body{
   height: 10vw;
   overflow-y: scroll;
+}
+
+#Chat-section{
+background-color: #E5E6E4;
 }
 
 #Sub-butt {
