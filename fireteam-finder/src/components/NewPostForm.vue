@@ -69,19 +69,24 @@ export default {
   background-size: cover;
 }
 
-.form-container {
+/* .form-container {
   background-color: #131F21;
   width: 20vw;
   margin-left: 40vw;
   opacity: 0.8;
   border-radius: 0.5vw;
-}
+} */
 
 #form {
   display: flex;
   flex-direction: column;
   padding: 50px;
   align-items: center;
+  background-color: #131F21;
+  width: 20vw;
+  margin-left: 40vw;
+  opacity: 0.8;
+  border-radius: 0.5vw;
 }
 
 textarea {
