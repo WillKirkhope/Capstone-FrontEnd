@@ -1,5 +1,7 @@
 ## Project Description ##
-- (Insert Name Here) is an lfg posting/social platform for gamers who are looking to connect with players who have similar interests as them. (Insert Name Here) will help connect people together for online gaming in a ,ore social less toxic manner, no crazy screaming squeakers in your part chat, no angry rage quitters, just people that want to play, and play the way you like to.
+- Fireteam Finder is an lfg posting/social platform for gamers who are looking to connect with players who have similar interests as them. Fireteam Finder will help connect people together for online gaming in a more social less toxic manner, no crazy screaming squeakers in your party chat, no angry rage quitters, just people that want to play, and play the way you like to.
+
+- As a user you can select your favorite game, see posts from other gamers playing that game, check out users profiles to get an idea of how they play and if it would work well with the way that you play, as well as chat with other users about their posts so that you can connect and play!
 
 ## Problem Statement ##
 - Video Games are fun, everyone enjoys playing them. But video games today are all about online play, some games don't even let you play with the person sitting next to you(Halo 5). Xbox live and Playstation network are great at helping you build a friend base on your console, and Discord is great for PC gaming. But what about the middle man? How do you make those connections in the first place? Meeting and building friendships with people online can be murky to say the least.
@@ -11,8 +13,7 @@
 - https://trello.com/b/7zbtZTyN/capstone-user-stories
 
 ## Tech Used ##
-- New Tech listed in ()
-- HTML5, CSS3, Vue.js, Bootstrap or (Vuetify), Firebase, Heroku or (Docker), PostgreSQL, Knex, (GraphQL), (Apollo Client), Maybe (Sequalize), possibly (Socket.IO)
+- HTML5, CSS3, Vue.js, Bootstrap, Firebase, Heroku, PostgreSQL, Knex, New Tech: Socket.IO
 
 ## ERD ##
 - https://github.com/WillKirkhope/Capstone-BackEnd/blob/master/DataBase/Capstone%20ERD.png
