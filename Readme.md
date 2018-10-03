@@ -20,3 +20,7 @@
 
 ## Wireframe ##
 - https://github.com/WillKirkhope/Capstone-FrontEnd/tree/master/Front-End/WireFrames
+
+## Deployed Link ##
+- The chat server is not currently deployed, but it does work.
+- https://fireteam-finder1.firebaseapp.com/#/
